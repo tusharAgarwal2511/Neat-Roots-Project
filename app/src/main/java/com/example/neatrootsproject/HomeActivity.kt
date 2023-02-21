@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
         val homeActivityBinding : ActivityHomeBinding by lazy {
 
+            // Error in this part
             ActivityHomeBinding.inflate(layoutInflater)
         }
 
