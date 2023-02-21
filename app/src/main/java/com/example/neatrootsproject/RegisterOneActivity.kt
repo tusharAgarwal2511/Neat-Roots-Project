@@ -20,7 +20,6 @@ class RegisterOneActivity : AppCompatActivity() {
         registerOneActivityBinding.btnRegisterNext.setOnClickListener {
             val intent = Intent(this, RegisterTwoActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }

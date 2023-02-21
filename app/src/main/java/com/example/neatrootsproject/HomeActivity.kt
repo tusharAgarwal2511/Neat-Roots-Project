@@ -9,17 +9,17 @@ import com.example.neatrootsproject.Fragments.HomeFragment
 import com.example.neatrootsproject.Fragments.ProfileFragment
 import com.example.neatrootsproject.Fragments.SearchFragment
 import com.example.neatrootsproject.databinding.ActivityHomeBinding
+import com.example.neatrootsproject.databinding.ActivityWelcomeBinding
 
 class HomeActivity : AppCompatActivity() {
+
+    val homeActivityBinding : ActivityHomeBinding by lazy {
+        ActivityHomeBinding.inflate(layoutInflater)
+    }
     override fun onCreate(savedInstanceState : Bundle?) {
 
         super.onCreate(savedInstanceState)
 
-        val homeActivityBinding : ActivityHomeBinding by lazy {
-
-            // Error in this part
-            ActivityHomeBinding.inflate(layoutInflater)
-        }
 
         setContentView(homeActivityBinding.root)
 
