@@ -17,8 +17,9 @@ class RegisterOneActivity : AppCompatActivity() {
         setContentView(registerOneActivityBinding.root)
         
 
-        registerOneActivityBinding.btnRegisterNext.setOnClickListener {
-            val intent = Intent(this, RegisterTwoActivity::class.java)
+        // redirects to the next register screen - register 2
+        registerOneActivityBinding.btnRegisterOneNext.setOnClickListener {
+            val intent = Intent(this@RegisterOneActivity, RegisterTwoActivity::class.java)
             startActivity(intent)
         }
     }

@@ -14,11 +14,17 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(welcomeActivityBinding.root)
 
+        // redirects to register screen
         welcomeActivityBinding.welcomeRegisterBtn.setOnClickListener {
-            //Redirect to Register
-//            startActivity(Intent(this,RegisterOneActivity::class.java))
-            val intent = Intent(this@WelcomeActivity,RegisterOneActivity::class.java)
-            startActivity(intent)
+
+            val intentRegister = Intent(this@WelcomeActivity,RegisterOneActivity::class.java)
+            startActivity(intentRegister)
+        }
+
+        // redirects to login screen
+        welcomeActivityBinding.welcomeLoginBtn.setOnClickListener {
+            val intentLogin = Intent(this@WelcomeActivity, LoginActivity::class.java)
+            startActivity(intentLogin)
         }
     }
 }

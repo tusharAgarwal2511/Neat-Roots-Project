@@ -1,5 +1,6 @@
 package com.example.neatrootsproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.neatrootsproject.databinding.ActivityRegisterTwoBinding
@@ -13,12 +14,10 @@ class RegisterTwoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(registerTwoActivityBinding.root)
 
-
-
-//       registerTwoActivityBinding.button.setOnClickListener {
-//            val intent = Intent(this, LoginActivity::class:java)
-//            startActivity(intent)
-//            finish()
-//        }
+        // redirects to login screen
+        registerTwoActivityBinding.btnRegisterSignUp.setOnClickListener {
+            val intent = Intent(this@RegisterTwoActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

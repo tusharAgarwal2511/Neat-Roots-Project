@@ -7,7 +7,7 @@
     tools:context=".RegisterOneActivity">
 
     <TextView
-        android:id="@+id/tv_register_two_text"
+        android:id="@+id/tv_register_one_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_register_name"
+        android:id="@+id/tv_register_one_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,14 +30,14 @@
         android:fontFamily="@font/roboto"
         android:ems="10"
         android:background="@drawable/edittext_background"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:hint="jane@example.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_register_two_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_one_text" />
 
     <EditText
-        android:id="@+id/et_register_password"
+        android:id="@+id/et_register_one_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -49,10 +49,10 @@
         android:hint="•••••••••••••••"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_register_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_one_email" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register_next"
+        android:id="@+id/btn_register_one_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_register_password" />
+        app:layout_constraintTop_toBottomOf="@+id/et_register_one_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
