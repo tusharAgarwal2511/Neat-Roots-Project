@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
     val homeActivityBinding : ActivityHomeBinding by lazy {
         ActivityHomeBinding.inflate(layoutInflater)
     }
-    // git testing
+    
     override fun onCreate(savedInstanceState : Bundle?) {
 
         super.onCreate(savedInstanceState)
