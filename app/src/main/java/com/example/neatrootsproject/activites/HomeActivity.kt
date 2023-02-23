@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
 
         setContentView(homeActivityBinding.root)
 
-
+       //Testing comment
         // default selected item when activity loads
         homeActivityBinding.bottomNavigationView.setItemSelected(R.id.bottom_navigation_home)
         replaceFragments(HomeFragment())
