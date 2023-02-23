@@ -1,4 +1,4 @@
-package com.example.neatrootsproject
+package com.example.neatrootsproject.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

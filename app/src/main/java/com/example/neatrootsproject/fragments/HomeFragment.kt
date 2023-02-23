@@ -1,4 +1,4 @@
-package com.example.neatrootsproject.Fragments
+package com.example.neatrootsproject.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
