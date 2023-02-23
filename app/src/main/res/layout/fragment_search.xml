@@ -48,6 +48,52 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_search_text"
                     android:drawableEnd="@drawable/search_icon"/>
 
+                <TextView
+                    android:id="@+id/textViewAllResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/roboto"
+                    android:lineHeight="15.23dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    app:layout_constraintTop_toBottomOf="@id/et_search_photos"
+                     android:text="All Result" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_image_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginHorizontal="10.5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/btn_see_more"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAllResult"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_see_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/welcome_login_btn"
+                    android:text="See More"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/search_image_recycler_view" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

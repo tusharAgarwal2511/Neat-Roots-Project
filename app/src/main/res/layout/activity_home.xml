@@ -32,6 +32,7 @@
         app:cnb_badgeColor="@color/red"
         app:cnb_radius="50dp"
         app:cnb_iconSize="24dp"
+        android:padding="7dp"
         app:cnb_animationDuration="100"
         />
 

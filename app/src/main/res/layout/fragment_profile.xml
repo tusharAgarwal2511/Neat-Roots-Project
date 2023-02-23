@@ -20,7 +20,7 @@
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="76dp"
-                android:src="@drawable/progile_image"
+                android:src="@drawable/profile_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
