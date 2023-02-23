@@ -5,7 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neatrootsproject.R
+import com.example.neatrootsproject.databinding.FragmentChatListBinding
+import com.example.neatrootsproject.databinding.FragmentHomeBinding
+import com.example.neatrootsproject.fragments.adapters.HomeHorizonalRvAdapter
+import com.example.neatrootsproject.fragments.modals.HomeHorizonalRvModel
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -21,6 +27,12 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    val HomeFragmentBinding by lazy {
+        FragmentHomeBinding.inflate(layoutInflater)
+    }
+
+    lateinit var homehorizonalrvadapter : HomeHorizonalRvAdapter
+    private lateinit var homehorizonalrvlist : ArrayList<HomeHorizonalRvModel>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,7 +44,24 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+//        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        homehorizonalrvlist = ArrayList()
+
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.homeonedemo,R.drawable.homeprofiledemo,"Ridhwan Nordin","@ridzjcob"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.home_fragment_img1,R.drawable.home_fragment_profile_img1,"Clem Onojeghuo","@clemono2"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.home_fragment_img2,R.drawable.home_fragment_profile_img2,"Jon Tyson","@jontyson"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.home_fragment_img3,R.drawable.home_fragment_profile_img3,"Simon Zhu","@smnzhu"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.homeonedemo,R.drawable.homeprofiledemo,"Ridhwan Nordin","@ridzjcob"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.home_fragment_img1,R.drawable.home_fragment_profile_img1,"Clem Onojeghuo","@clemono2"))
+        homehorizonalrvlist.add(HomeHorizonalRvModel(R.drawable.home_fragment_img2,R.drawable.home_fragment_profile_img2,"Jon Tyson","@jontyson"))
+
+        homehorizonalrvadapter = HomeHorizonalRvAdapter(homehorizonalrvlist)
+
+        HomeFragmentBinding.homeFragmentRecyclerView.adapter = homehorizonalrvadapter
+        HomeFragmentBinding.homeFragmentRecyclerView.layoutManager = LinearLayoutManager(this@HomeFragment.context,LinearLayoutManager.HORIZONTAL,false)
+
+        return HomeFragmentBinding.root
     }
 
     companion object {
