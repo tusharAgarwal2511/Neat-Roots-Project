@@ -1,7 +1,6 @@
 package com.example.neatrootsproject
 
 
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +14,7 @@ class RegisterOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(registerOneActivityBinding.root)
-        
+
 
         // redirects to the next register screen - register 2
         registerOneActivityBinding.btnRegisterOneNext.setOnClickListener {
