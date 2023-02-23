@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neatrootsproject.R
-import com.example.neatrootsproject.databinding.ActivityLoginBinding
 import com.example.neatrootsproject.databinding.FragmentChatListBinding
+import com.example.neatrootsproject.fragments.adapters.ChatListRecyclerViewAdapter
+import com.example.neatrootsproject.fragments.modals.ChatListModal
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

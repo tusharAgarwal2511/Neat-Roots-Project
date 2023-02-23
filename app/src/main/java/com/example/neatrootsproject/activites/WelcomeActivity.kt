@@ -1,9 +1,8 @@
-package com.example.neatrootsproject
+package com.example.neatrootsproject.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.neatrootsproject.databinding.ActivityHomeBinding
 import com.example.neatrootsproject.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
@@ -17,7 +16,7 @@ class WelcomeActivity : AppCompatActivity() {
         // redirects to register screen
         welcomeActivityBinding.welcomeRegisterBtn.setOnClickListener {
 
-            val intentRegister = Intent(this@WelcomeActivity,RegisterOneActivity::class.java)
+            val intentRegister = Intent(this@WelcomeActivity, RegisterOneActivity::class.java)
             startActivity(intentRegister)
         }
 

@@ -12,19 +12,19 @@
         android:theme="@style/Theme.NeatRootsProject"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".activites.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterTwoActivity"
+            android:name=".activites.RegisterTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterOneActivity"
+            android:name=".activites.RegisterOneActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activites.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".activites.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

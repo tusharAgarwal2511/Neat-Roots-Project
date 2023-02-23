@@ -1,11 +1,11 @@
-package com.example.neatrootsproject.fragments
+package com.example.neatrootsproject.fragments.adapters
 
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neatrootsproject.databinding.ChatListItemBinding
+import com.example.neatrootsproject.fragments.modals.ChatListModal
 
 class ChatListRecyclerViewAdapter(private val chatList : ArrayList<ChatListModal>) :RecyclerView.Adapter<ChatListRecyclerViewAdapter.ViewHolder>() {
 

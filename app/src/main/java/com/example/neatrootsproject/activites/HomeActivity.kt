@@ -1,8 +1,9 @@
-package com.example.neatrootsproject
+package com.example.neatrootsproject.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.neatrootsproject.R
 import com.example.neatrootsproject.fragments.ChatListFragment
 import com.example.neatrootsproject.fragments.HomeFragment
 import com.example.neatrootsproject.fragments.ProfileFragment

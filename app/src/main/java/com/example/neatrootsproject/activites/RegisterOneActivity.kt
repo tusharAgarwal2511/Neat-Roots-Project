@@ -1,4 +1,4 @@
-package com.example.neatrootsproject
+package com.example.neatrootsproject.activites
 
 
 

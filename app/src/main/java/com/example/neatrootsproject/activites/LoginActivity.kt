@@ -1,10 +1,9 @@
-package com.example.neatrootsproject
+package com.example.neatrootsproject.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.neatrootsproject.databinding.ActivityLoginBinding
-import com.example.neatrootsproject.databinding.ActivityRegisterOneBinding
 
 class LoginActivity : AppCompatActivity() {
 
