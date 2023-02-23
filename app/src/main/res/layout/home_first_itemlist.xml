@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/home_fragment_horizontal_rv_image"
+        android:layout_width="match_parent"
+        android:layout_height="343dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homeonedemo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_fragment_horizontal_rv_profile"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_fragment_horizontal_rv_image"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/home_fragment_horizontal_rv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/home_fragment_horizontal_rv_profile"
+        app:layout_constraintStart_toEndOf="@+id/home_fragment_horizontal_rv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/home_fragment_horizontal_rv_image" />
+
+    <TextView
+        android:id="@+id/home_fragment_horizontal_rv_username"
+        android:layout_width="60dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home_fragment_horizontal_rv_name"
+        app:layout_constraintStart_toStartOf="@+id/home_fragment_horizontal_rv_name"
+        app:layout_constraintTop_toBottomOf="@+id/home_fragment_horizontal_rv_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
