@@ -1,16 +1,20 @@
 package com.example.neatrootsproject.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.neatrootsproject.AddData
 import com.example.neatrootsproject.R
-import com.example.neatrootsproject.databinding.FragmentChatListBinding
 import com.example.neatrootsproject.databinding.FragmentHomeBinding
 import com.example.neatrootsproject.fragments.adapters.HomeHorizonalRvAdapter
+import com.example.neatrootsproject.fragments.adapters.HomeStaggerRvAdapter
+import com.example.neatrootsproject.fragments.adapters.ProfileFragmentRecyclerAdapter
 import com.example.neatrootsproject.fragments.modals.HomeHorizonalRvModel
+import com.example.neatrootsproject.fragments.modals.HomeStaggerRvModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,6 +37,9 @@ class HomeFragment : Fragment() {
 
     lateinit var homehorizonalrvadapter : HomeHorizonalRvAdapter
     private lateinit var homehorizonalrvlist : ArrayList<HomeHorizonalRvModel>
+
+    //stagger recyclerView
+    private lateinit var homestaggerlist : ArrayList<HomeStaggerRvModel>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -43,8 +50,14 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        //Stagger Recycler View
+        homestaggerlist = AddData.addDataToStaggerArrayList()
+        HomeFragmentBinding.homeFragmentStaggerRv.adapter = HomeStaggerRvAdapter(homestaggerlist)
+        HomeFragmentBinding.homeFragmentStaggerRv.setHasFixedSize(true)
+        HomeFragmentBinding.homeFragmentStaggerRv.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
+
 
         homehorizonalrvlist = ArrayList()
 
@@ -60,7 +73,6 @@ class HomeFragment : Fragment() {
 
         HomeFragmentBinding.homeFragmentRecyclerView.adapter = homehorizonalrvadapter
         HomeFragmentBinding.homeFragmentRecyclerView.layoutManager = LinearLayoutManager(this@HomeFragment.context,LinearLayoutManager.HORIZONTAL,false)
-
         return HomeFragmentBinding.root
     }
 

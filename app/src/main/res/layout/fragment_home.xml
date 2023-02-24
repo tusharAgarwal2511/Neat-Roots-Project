@@ -22,6 +22,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="76dp"
                 android:text="Discover"
+                android:textColor="@color/black"
                 android:textSize="36sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -48,6 +49,47 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/home_fragment_tv_whatsnew" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="BROWSE ALL"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_fragment_recyclerView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_fragment_stagger_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_button_more_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/welcome_login_btn"
+                android:text="See More"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_fragment_stagger_rv" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
