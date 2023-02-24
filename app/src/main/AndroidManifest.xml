@@ -15,6 +15,9 @@
             android:name=".activites.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".activites.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activites.RegisterTwoActivity"
             android:exported="false" />
         <activity
