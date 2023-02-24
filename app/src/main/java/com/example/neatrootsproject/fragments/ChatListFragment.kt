@@ -1,12 +1,15 @@
 package com.example.neatrootsproject.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neatrootsproject.R
+import com.example.neatrootsproject.activites.ChatActivity
 import com.example.neatrootsproject.databinding.FragmentChatListBinding
 import com.example.neatrootsproject.fragments.adapters.ChatListRecyclerViewAdapter
 import com.example.neatrootsproject.fragments.modals.ChatListModal
@@ -21,7 +24,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ChatListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ChatListFragment : Fragment() {
+class ChatListFragment : Fragment(), ChatListRecyclerViewAdapter.OnChatItemClickListener {
     // TODO: Rename and change types of parameters
 
     val chatListFragmentBinding by lazy {
@@ -46,13 +49,20 @@ class ChatListFragment : Fragment() {
         chatList.add(ChatListModal(name = "Beth Williams", chat = "I’m looking for tips around capturing the milky way. I have a 6D with a 24-100mm...", profile = R.drawable.chat_list_fragment_img3))
         chatList.add(ChatListModal(name = "Rev Shawn", chat = "Wanted to ask you if you are available for portrait shoot next week", profile = R.drawable.chat_list_fragment_img4))
 
-        chatListRecyclerViewAdapter = ChatListRecyclerViewAdapter(chatList)
+        chatListRecyclerViewAdapter = ChatListRecyclerViewAdapter(chatList, this)
 
         chatListFragmentBinding.chatListRecyclerView.adapter = chatListRecyclerViewAdapter
         chatListFragmentBinding.chatListRecyclerView.layoutManager = LinearLayoutManager(this@ChatListFragment.context)
 
 
         return chatListFragmentBinding.root
+    }
+
+    override fun onClick(position : Int) {
+        val chatActivityIntent = Intent(context, ChatActivity::class.java)
+        val chatName = chatList[position]
+        chatActivityIntent.putExtra("NAME", chatName.name)
+        startActivity(chatActivityIntent)
     }
 
 }

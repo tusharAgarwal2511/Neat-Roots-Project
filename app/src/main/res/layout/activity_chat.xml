@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/tv_chat_fragment_text"
+        android:id="@+id/tv_chat_fragment_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -29,7 +29,7 @@
         android:background="@color/grey"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_chat_fragment_text" />
+        app:layout_constraintTop_toBottomOf="@id/tv_chat_fragment_name" />
 
     <ImageView
         android:id="@+id/tv_chat_profile1"
@@ -39,7 +39,7 @@
         android:layout_marginTop="34dp"
         android:src="@drawable/chat_list_fragment_img1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chat_fragment_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_chat_fragment_name" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_chat1"
@@ -123,15 +123,5 @@
             android:textColor="@color/black"
             android:textSize="13sp" />
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/chat_fragment_back_btn"
-        android:layout_width="12dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/back_arrcow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

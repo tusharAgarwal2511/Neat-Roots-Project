@@ -5,19 +5,28 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.neatrootsproject.activites.ChatActivity
 import com.example.neatrootsproject.databinding.ChatListItemBinding
 import com.example.neatrootsproject.databinding.FragmentChatListBinding
 import com.example.neatrootsproject.fragments.modals.ChatListModal
 
 
-class ChatListRecyclerViewAdapter(private val chatList : ArrayList<ChatListModal>) : RecyclerView.Adapter<ChatListRecyclerViewAdapter.ViewHolder>() {
+class ChatListRecyclerViewAdapter(private val chatList : ArrayList<ChatListModal>, private val onChatItemClickListener : OnChatItemClickListener) : RecyclerView.Adapter<ChatListRecyclerViewAdapter.ViewHolder>() {
 
     private lateinit var chatListBinding : FragmentChatListBinding
-    inner class ViewHolder(val chatListItemBinding : ChatListItemBinding) : RecyclerView.ViewHolder(chatListItemBinding.root){}
+    inner class ViewHolder(val chatListItemBinding : ChatListItemBinding, onChatItemClickListener : OnChatItemClickListener) : RecyclerView.ViewHolder(chatListItemBinding.root){
+
+        init {
+
+            chatListItemBinding.clChatListItem.setOnClickListener {
+                onChatItemClickListener.onClick(adapterPosition)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : ViewHolder {
         val view = ChatListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(view)
+        return ViewHolder(view, onChatItemClickListener)
     }
 
     override fun getItemCount() : Int {
@@ -37,5 +46,10 @@ class ChatListRecyclerViewAdapter(private val chatList : ArrayList<ChatListModal
 
     }
 
+    interface OnChatItemClickListener{
+
+        fun onClick(position : Int)
+
+    }
 
 }
