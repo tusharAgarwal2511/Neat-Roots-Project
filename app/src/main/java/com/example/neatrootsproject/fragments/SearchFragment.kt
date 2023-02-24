@@ -1,10 +1,15 @@
 package com.example.neatrootsproject.fragments
 
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neatrootsproject.R
 import com.example.neatrootsproject.databinding.FragmentSearchBinding
@@ -57,7 +62,18 @@ class SearchFragment : Fragment() {
 
         searchFragmentAdapter = SearchFragmentImageRecyclerViewAdapter(searchImageList)
         searchFragmentBinding.searchImageRecyclerView.layoutManager = LinearLayoutManager(context)
-        searchFragmentBinding.searchImageRecyclerView.adapter= searchFragmentAdapter
+
+
+        searchFragmentBinding.etSearchPhotos.setEndIconOnClickListener {
+            searchFragmentBinding.btnSeeMore.isVisible = true
+            searchFragmentBinding.textViewAllResult.isVisible = true
+
+            searchFragmentBinding.searchImageRecyclerView.adapter= searchFragmentAdapter
+
+
+
+
+        }
         return searchFragmentBinding.root
     }
 
