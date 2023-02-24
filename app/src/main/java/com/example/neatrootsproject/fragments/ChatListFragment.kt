@@ -14,18 +14,8 @@ import com.example.neatrootsproject.databinding.FragmentChatListBinding
 import com.example.neatrootsproject.fragments.adapters.ChatListRecyclerViewAdapter
 import com.example.neatrootsproject.fragments.modals.ChatListModal
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ChatListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ChatListFragment : Fragment(), ChatListRecyclerViewAdapter.OnChatItemClickListener {
-    // TODO: Rename and change types of parameters
+
 
     val chatListFragmentBinding by lazy {
         FragmentChatListBinding.inflate(layoutInflater)
