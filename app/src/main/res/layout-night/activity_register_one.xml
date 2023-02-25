@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activites.RegisterTwoActivity">
+    android:background="@color/dark"
+    tools:context=".activites.RegisterOneActivity">
 
     <TextView
-        android:id="@+id/tv_login_text"
+        android:id="@+id/tv_register_one_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/comfortaa"
         android:text="Register"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
@@ -21,55 +22,52 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_login_email"
+        android:id="@+id/tv_register_one_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background_dark"
         android:ems="10"
-        android:background="@drawable/edittext_background"
-        android:inputType="textPersonName"
-        android:hint="the_jane"
         android:fontFamily="@font/roboto"
+        android:hint="jane@example.com"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_one_text" />
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_register_signUp"
+    <EditText
+        android:id="@+id/et_register_one_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_background"
-        android:text="Sign up"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background_dark"
+        android:ems="10"
+        android:hint="•••••••••••••••"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_one_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register_one_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background_dark"
+        android:fontFamily="@font/roboto"
+        android:text="Next"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:fontFamily="@font/roboto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
-
-    <TextView
-        android:id="@+id/tv_ts_pp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:textAllCaps="false"
-        android:fontFamily="@font/roboto"
-        android:text="@string/registerText"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register_signUp" />
+        app:layout_constraintTop_toBottomOf="@+id/et_register_one_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

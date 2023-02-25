@@ -22,16 +22,16 @@
                     android:id="@+id/tv_search_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="76dp"
                     android:fontFamily="@font/comfortaa"
                     android:text="Search"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="36sp"
-                    android:layout_marginTop="76dp"
-                    android:layout_marginStart="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.061"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -50,7 +50,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_background"
+                        android:background="@drawable/edittext_background_dark"
                         android:inputType="textPersonName" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,18 +59,18 @@
                     android:id="@+id/text_view_all_result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textAllCaps="true"
-                    android:fontFamily="@font/roboto"
-                    android:lineHeight="15.23dp"
-                    android:layout_marginTop="32dp"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/roboto"
                     android:gravity="center_vertical"
-                    android:textColor="#000"
+                    android:lineHeight="15.23dp"
+                    android:text="All Result"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
                     android:visibility="gone"
-                    app:layout_constraintTop_toBottomOf="@id/et_search_photos"
-                     android:text="All Result" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_search_photos" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/search_image_recycler_view"
@@ -92,7 +92,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="32dp"
-                    android:background="@drawable/welcome_login_btn"
+                    android:background="@drawable/welcome_login_btn_dark"
                     android:fontFamily="@font/roboto"
                     android:text="See More"
                     android:textAllCaps="true"

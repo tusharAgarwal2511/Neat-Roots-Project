@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark"
     tools:context=".activites.ChatActivity">
 
 
@@ -14,7 +15,7 @@
         android:layout_marginTop="56dp"
         android:fontFamily="@font/roboto"
         android:text="James"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="11dp"
-        android:background="@color/grey"
+        android:background="@color/dark_grey"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_chat_fragment_name" />
@@ -46,7 +47,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:backgroundTint="@color/light_grey"
+        android:backgroundTint="@color/dark_grey"
         android:padding="16dp"
         app:cardCornerRadius="6dp"
         app:layout_constraintStart_toEndOf="@+id/tv_chat_profile1"
@@ -59,7 +60,7 @@
             android:layout_margin="16dp"
             android:fontFamily="@font/roboto"
             android:text="Really love your most recent photo. I’ve been trying to capture the same thing for a few months and would love some tips!"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
     </androidx.cardview.widget.CardView>
 
@@ -110,7 +111,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:backgroundTint="@color/light_grey"
+        android:backgroundTint="@color/dark_grey"
         android:padding="16dp"
         app:cardCornerRadius="6dp"
         app:layout_constraintStart_toEndOf="@+id/tv_chat_profile3"
@@ -123,7 +124,7 @@
             android:layout_margin="16dp"
             android:fontFamily="@font/roboto"
             android:text="Thank you! That was very helpful!"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="13sp" />
     </androidx.cardview.widget.CardView>
 
