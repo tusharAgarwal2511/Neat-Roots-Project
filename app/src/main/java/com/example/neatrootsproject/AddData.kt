@@ -14,6 +14,14 @@ object AddData {
             arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_five))
             arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_six))
 
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_one))
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_two))
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_three))
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_four))
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_five))
+            arraylist.add(ProfileFragmentRecyclerModel(R.drawable.profile_recycler_image_six))
+
+
             return arraylist
 
     }

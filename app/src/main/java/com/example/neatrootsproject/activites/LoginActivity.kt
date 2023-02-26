@@ -17,8 +17,22 @@ class LoginActivity : AppCompatActivity() {
 
         // redirects to home screen
         loginActivityBinding.btnLoginLogin.setOnClickListener {
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-            startActivity(intent)
+
+            val email = loginActivityBinding.etLoginEmail.text.toString()
+            val password = loginActivityBinding.etLoginPassword.text.toString()
+
+            if (email.equals("")) {
+                loginActivityBinding.etLoginEmail.error = "Please enter email"
+                return@setOnClickListener
+            }else if (password.isEmpty()){
+                loginActivityBinding.etLoginPassword.error = "Please enter password"
+                return@setOnClickListener
+            }else{
+                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                startActivity(intent)
+            }
+
+
         }
     }
 }

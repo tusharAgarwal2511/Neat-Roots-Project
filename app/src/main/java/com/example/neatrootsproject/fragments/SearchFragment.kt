@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neatrootsproject.R
@@ -41,6 +39,17 @@ class SearchFragment : Fragment() {
 
         searchFragmentAdapter = SearchFragmentImageRecyclerViewAdapter(searchImageList)
         searchFragmentBinding.searchImageRecyclerView.layoutManager = LinearLayoutManager(context)
+        searchFragmentBinding.searchImageRecyclerView.smoothScrollToPosition(0)
+
+
+        searchFragmentBinding.searchEdittext?.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                searchFragmentBinding.searchEdittext?.hint = "Search"
+                searchFragmentBinding.searchEdittext!!.text!!.clear()
+            } else {
+                searchFragmentBinding.searchEdittext!!.hint = ""
+            }
+        }
 
 
         searchFragmentBinding.etSearchPhotos.setEndIconOnClickListener {
@@ -54,8 +63,8 @@ class SearchFragment : Fragment() {
             imm.hideSoftInputFromWindow(searchFragmentBinding.etSearchPhotos.windowToken, 0)
 
 
-
         }
         return searchFragmentBinding.root
+
     }
 }

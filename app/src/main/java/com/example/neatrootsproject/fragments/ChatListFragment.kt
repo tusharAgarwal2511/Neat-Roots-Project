@@ -42,6 +42,7 @@ class ChatListFragment : Fragment(), ChatListRecyclerViewAdapter.OnChatItemClick
         chatListRecyclerViewAdapter = ChatListRecyclerViewAdapter(chatList, this)
 
         chatListFragmentBinding.chatListRecyclerView.adapter = chatListRecyclerViewAdapter
+        chatListFragmentBinding.chatListRecyclerView.smoothScrollToPosition(0)
         chatListFragmentBinding.chatListRecyclerView.layoutManager = LinearLayoutManager(this@ChatListFragment.context)
 
 
