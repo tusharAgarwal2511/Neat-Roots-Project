@@ -22,10 +22,10 @@ class LoginActivity : AppCompatActivity() {
             val password = loginActivityBinding.etLoginPassword.text.toString()
 
             if (email.equals("")) {
-                loginActivityBinding.etLoginEmail.error = "Please enter email"
+                loginActivityBinding.etLoginEmail.error = "Please enter your email"
                 return@setOnClickListener
             }else if (password.isEmpty()){
-                loginActivityBinding.etLoginPassword.error = "Please enter password"
+                loginActivityBinding.etLoginPassword.error = "Please enter your password"
                 return@setOnClickListener
             }else{
                 val intent = Intent(this@LoginActivity, HomeActivity::class.java)

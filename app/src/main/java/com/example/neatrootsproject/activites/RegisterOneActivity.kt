@@ -28,15 +28,15 @@ class RegisterOneActivity : AppCompatActivity() {
             val intent = Intent(this@RegisterOneActivity, RegisterTwoActivity::class.java)
 
             //            use for email validation and password validation
-            val email = registerOneActivityBinding.tvRegisterOneEmail.text.toString()
+            val email = registerOneActivityBinding.etRegisterOneEmail.text.toString()
             if (TextUtils.isEmpty(email)){
-                registerOneActivityBinding.tvRegisterOneEmail.error = "Please Enter your email here!"
+                registerOneActivityBinding.etRegisterOneEmail.error = "Please enter your email"
                 return@setOnClickListener
             }
 
             val password = registerOneActivityBinding.etRegisterOnePassword.text.toString()
             if (TextUtils.isEmpty(password)){
-                registerOneActivityBinding.etRegisterOnePassword.error = "Please Enter your email here!"
+                registerOneActivityBinding.etRegisterOnePassword.error = "Please enter your password"
                 return@setOnClickListener
             }
             startActivity(intent)

@@ -7,7 +7,7 @@
     tools:context=".activites.RegisterTwoActivity">
 
     <TextView
-        android:id="@+id/tv_login_text"
+        android:id="@+id/tv_register_two_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_login_email"
+        android:id="@+id/et_register_two_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,7 +34,7 @@
         android:fontFamily="@font/roboto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_text" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_two_text" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_register_two_name" />
 
     <TextView
         android:id="@+id/tv_ts_pp"

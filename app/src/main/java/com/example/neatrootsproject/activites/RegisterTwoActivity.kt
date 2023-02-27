@@ -24,9 +24,9 @@ class RegisterTwoActivity : AppCompatActivity() {
             val intent = Intent(this@RegisterTwoActivity, LoginActivity::class.java)
 
 //            use for email validation
-            val email = registerTwoActivityBinding.etLoginEmail.text.toString()
+            val email = registerTwoActivityBinding.etRegisterTwoName?.text.toString()
             if (TextUtils.isEmpty(email)){
-                registerTwoActivityBinding.etLoginEmail.error = "Please Enter your email here!"
+                registerTwoActivityBinding.etRegisterTwoName?.error = "Please enter your name"
                 return@setOnClickListener
             }
 
