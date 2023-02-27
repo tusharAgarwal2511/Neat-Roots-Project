@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="dark">#141414</color>
-    <color name="dark_grey">#2D2D2D</color>
+    <color name="dark">#0C0816</color>
+    <color name="dark_light">#251749</color>
     <color name="pink">#E4396F</color>
     <color name="red">#D32F2F</color>
     <color name="grey">#AAAAAA</color>

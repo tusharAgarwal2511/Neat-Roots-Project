@@ -7,109 +7,109 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SearchFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/dark">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="76dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_search_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto"
+                app:endIconDrawable="@drawable/search_icon"
+                app:endIconMode="custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_search_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_background_dark"
+                    android:inputType="textPersonName"
+                    android:text="Search" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/text_view_all_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center_vertical"
+                android:lineHeight="15.23dp"
+                android:text="All Result"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_search_photos" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_image_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:layout_marginHorizontal="10.5dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toTopOf="@id/btn_see_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_all_result" />
 
-                <TextView
-                    android:id="@+id/tv_search_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="76dp"
-                    android:fontFamily="@font/comfortaa"
-                    android:text="Search"
-                    android:textColor="@color/white"
-                    android:textSize="36sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.061"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/et_search_photos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/roboto"
-                    app:endIconDrawable="@drawable/search_icon"
-                    app:endIconMode="custom"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_search_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edittext_background_dark"
-                        android:inputType="textPersonName" />
-                </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_see_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/welcome_login_btn"
+                android:fontFamily="@font/roboto"
+                android:text="See More"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_image_recycler_view" />
 
 
-                <TextView
-                    android:id="@+id/text_view_all_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center_vertical"
-                    android:lineHeight="15.23dp"
-                    android:text="All Result"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:visibility="gone"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_search_photos" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/search_image_recycler_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginHorizontal="10.5dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/btn_see_more"
-                    app:layout_constraintTop_toBottomOf="@id/text_view_all_result" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_see_more"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="32dp"
-                    android:background="@drawable/welcome_login_btn_dark"
-                    android:fontFamily="@font/roboto"
-                    android:text="See More"
-                    android:textAllCaps="true"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/search_image_recycler_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </FrameLayout>
